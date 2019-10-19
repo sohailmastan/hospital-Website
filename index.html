@@ -18,6 +18,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+       
+
 </head>
 <body>
 
@@ -31,36 +33,36 @@
          <h2 style="color: white;">Login</h2> <!-- margin-left: 378px;-->
                
     
- <form action="home.html" class="needs-validation" novalidate style="margin-top: 14px;"> 
+ <div  style="margin-top: 14px;"> 
     <div class="form-group">
       <label for="uname" style="color: white">Username:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+      <input type="text" class="form-control" id="userName" placeholder="Enter username" name="uname" >
       <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
       <label for="pwd" style="color: white">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" >
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group form-check">
       <label class="form-check-label" style="color: white">
-        <input class="form-check-input" type="checkbox" name="remember" required> Remember Password.
-        <div class="valid-feedback">Valid.</div>
+        <input class="form-check-input" type="checkbox" name="remember" > Remember Password.
+       <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Check this checkbox to continue.</div>
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+    <button type="submit" class="btn btn-primary" onclick="openHome()">Submit</button> <br> <br>
      <a class="" href="register.html" style="color: white">Register</a><br>
           <a class="" href="forgot-password.html" style="color: white">Forgot Password</a>
-  </form>
+  </div>
              
 </div>
 
 <script>
 // Disable form submissions if there are invalid fields
-(function() {
+/*(function() {
   'use strict';
   window.addEventListener('load', function() {
     // Get the forms we want to add validation styles to
@@ -76,7 +78,21 @@
       }, false);
     });
   }, false);
-})();
+})();*/
+     
+   /* function openHome(){
+       if($("#userName").val() || $("#pwd").val() == ""){
+           alert("User name or password is incorrect");
+          
+       } 
+        else{
+            window.location.href = '/home';
+        }
+    }*/
+     function openHome(){
+          window.location.href = 'home.html';
+     }
+    
 </script>
 
 </div>
